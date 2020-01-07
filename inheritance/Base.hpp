@@ -4,11 +4,19 @@
 #include <iostream>
 using namespace std;
 class Base {
-    int x;
+    
     public:
+        int x;
         Base()
         {
+            x = 666;
             cout << "base default constructor\n";
+        }
+    protected:
+        Base(int i)
+        {
+            x = i;
+            cout << "base paramterized constructor\n";
         }
 };
 

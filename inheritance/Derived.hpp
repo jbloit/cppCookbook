@@ -5,18 +5,19 @@
 
 class Derived : public Base
 { 
-    int y;
     public:
-    // default constructor
-    Derived() 
-    { 
-        cout << "Derived default constructor\n"; 
-    }
-    // parameterized constructor
-    Derived(int i) 
-    { 
-        cout << "Derived parameterized constructor\n"; 
-    }
+        int y;
+        // default constructor, using the parameterized Base constructor
+        Derived() : Base(777) 
+        { 
+            cout << "Derived default constructor\n"; 
+        }
+        // parameterized constructor
+        Derived(int i) 
+        { 
+            y = i;
+            cout << "Derived parameterized constructor\n"; 
+        }
 };
 
 #endif
